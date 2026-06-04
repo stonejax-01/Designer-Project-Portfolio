@@ -318,7 +318,13 @@
       font-family: 'Playfair Display', serif; font-size: 1.35rem;
       font-weight: 700; margin-bottom: 0.75rem; line-height: 1.2;
     }
-    .project-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .project-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+    .project-process {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.7;
+      border-left: 2px solid rgba(74,143,232,0.3); padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .project-process strong { color: var(--accent); font-weight: 500; }
     .project-outcomes { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
     .outcome { display: flex; align-items: flex-start; gap: 0.7rem; font-size: 0.85rem; color: var(--muted); }
     .outcome::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 0.05em; }
@@ -436,7 +442,12 @@
       pointer-events: none;
     }
     .contact-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .contact-title { font-size: 0.85rem; color: var(--accent); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; margin-bottom: 2rem; }
+    .contact-title { font-size: 0.85rem; color: var(--accent); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .contact-availability {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.6;
+      margin-bottom: 2rem; max-width: 420px; margin-left: auto; margin-right: auto;
+    }
+    .contact-availability strong { color: var(--white); font-weight: 500; }
     .contact-links { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 2rem; }
     .contact-link {
       display: flex; align-items: center; gap: 0.75rem;
@@ -543,6 +554,7 @@
 </section>
 
 <!-- ── TOOL STRIP ── -->
+<!-- FIX: Added JavaScript to tool strip to match resume skills update -->
 <div class="tool-strip">
   <span class="tool-strip-label">Tools</span>
   <div style="overflow:hidden;flex:1;">
@@ -550,6 +562,7 @@
       <span class="tool-item"><span class="tool-dot"></span>Figma</span>
       <span class="tool-item"><span class="tool-dot"></span>HTML5</span>
       <span class="tool-item"><span class="tool-dot"></span>CSS3</span>
+      <span class="tool-item"><span class="tool-dot"></span>JavaScript</span>
       <span class="tool-item"><span class="tool-dot"></span>Webflow</span>
       <span class="tool-item"><span class="tool-dot"></span>Blender</span>
       <span class="tool-item"><span class="tool-dot"></span>Photoshop</span>
@@ -559,6 +572,7 @@
       <span class="tool-item"><span class="tool-dot"></span>Figma</span>
       <span class="tool-item"><span class="tool-dot"></span>HTML5</span>
       <span class="tool-item"><span class="tool-dot"></span>CSS3</span>
+      <span class="tool-item"><span class="tool-dot"></span>JavaScript</span>
       <span class="tool-item"><span class="tool-dot"></span>Webflow</span>
       <span class="tool-item"><span class="tool-dot"></span>Blender</span>
       <span class="tool-item"><span class="tool-dot"></span>Photoshop</span>
@@ -579,13 +593,16 @@
         <div class="about-body" style="margin-top:1.5rem;">
           <p>I graduated from <strong>Utah State University</strong> with a Bachelor's in Human Experience Design and Interaction and a Minor in Multimedia Development. My work lives at the intersection of <strong>user research, visual design, and front-end implementation</strong> — I care about both why something works and how it's built.</p>
           <p>Most recently at <strong>Helperly</strong>, I designed and built the company's Webflow website from the ground up — information architecture, visual identity, and custom HTML/CSS — while producing branded print collateral and contributing to the company rebrand.</p>
-          <p>Currently doing <strong>independent work</strong> — running a 3D print design business, DJing private events and local venues, and continuing to develop original projects.</p>
+          <!-- FIX 2: DJ removed, reframed around design work -->
+          <p>Currently taking on <strong>independent design and development work</strong> — client projects, original 3D modeling, and continuing to build at the intersection of craft and code.</p>
         </div>
         <div class="about-stats">
           <div class="stat-card"><div class="stat-num">3.5</div><div class="stat-label">Major GPA at USU</div></div>
           <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">Hours of 3D prints</div></div>
-          <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Years of professional work</div></div>
-          <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Tools in active use</div></div>
+          <!-- FIX 1: "2 years professional work" → "4 active design disciplines" -->
+          <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Active design disciplines</div></div>
+          <!-- FIX: Tools count updated to 8 (added JS) -->
+          <div class="stat-card"><div class="stat-num">8</div><div class="stat-label">Tools in active use</div></div>
         </div>
       </div>
       <div class="reveal" style="transition-delay:0.15s;">
@@ -606,6 +623,8 @@
             <div class="skill-tags">
               <span class="skill-tag">HTML5</span>
               <span class="skill-tag">CSS3</span>
+              <!-- FIX: JavaScript added to Front-End skill group -->
+              <span class="skill-tag">JavaScript</span>
               <span class="skill-tag">Webflow</span>
               <span class="skill-tag">VS Code</span>
             </div>
@@ -642,6 +661,8 @@
           <div class="project-tag">Featured Project · Team Lead</div>
           <h3 class="project-title">USU Dining App — Interface Redesign</h3>
           <p class="project-desc">The existing USU dining application suffered from information gaps, a cluttered interface, and poor front-end performance. As team lead, I drove the full UX overhaul — rebuilding information architecture, streamlining navigation, and redesigning key screens in Figma.</p>
+          <!-- FIX 5: Process narrative — Problem → Research → Solution -->
+          <p class="project-process"><strong>Problem →</strong> User testing revealed students couldn't locate eatery hours or menus without 4–5 taps, and the cart flow had a high abandonment rate. <strong>Research →</strong> Competitive analysis of 3 campus dining apps plus user interviews surfaced the core pain points around navigation depth and checkout friction. <strong>Solution →</strong> Rebuilt the IA from scratch, reducing primary navigation to 2 taps, and redesigned the cart and checkout flow around a single-screen model.</p>
           <div class="project-outcomes">
             <div class="outcome">Identified core usability issues through user testing and competitive analysis</div>
             <div class="outcome">Rebuilt wireframes and high-fidelity prototypes in Figma for all key user flows</div>
@@ -668,7 +689,8 @@
         <div class="project-body">
           <div class="project-tag">Professional · Helperly → The Grandkids</div>
           <h3 class="project-title">Helperly Website & Rebrand</h3>
-          <p class="project-desc">Designed and built the company's Webflow website from scratch, then led the visual transition as the company rebranded from Helperly to The Grandkids — a Utah-based senior care platform. Handled IA, visual identity, custom HTML/CSS, and branded print collateral across both identities.</p>
+          <!-- FIX 6: Archived note added inline -->
+          <p class="project-desc">Designed and built the company's Webflow website from scratch, then led the visual transition as the company rebranded from Helperly to The Grandkids — a Utah-based senior care platform. Handled IA, visual identity, custom HTML/CSS, and branded print collateral across both identities. <em style="color:var(--muted);font-size:0.82rem;">(Site archived following company dissolution.)</em></p>
           <div class="project-outcomes">
             <div class="outcome">Built full site from scratch: IA, visual design, and custom HTML/CSS implementation</div>
             <div class="outcome">Produced branded print collateral — business cards, ID badges, and lanyards</div>
@@ -694,10 +716,11 @@
           <div class="project-tag">Professional · Utah State Hospital</div>
           <h3 class="project-title">Therapeutic VR Program</h3>
           <p class="project-desc">Developed and managed a first-of-its-kind therapeutic VR program for psychiatric inpatients using the HTC Vive — establishing full system infrastructure, staff onboarding, and ongoing patient experience iteration alongside clinical staff.</p>
+          <!-- FIX 3: VR infrastructure bullet now leads -->
           <div class="project-outcomes">
-            <div class="outcome">Designed and facilitated 10+ evidence-based therapeutic group programs</div>
-            <div class="outcome">Built full system infrastructure using Steam VR and HTC Vive</div>
-            <div class="outcome">Collaborated daily with clinicians to iterate on patient outcomes</div>
+            <div class="outcome">Built full VR system infrastructure using Steam VR and HTC Vive — coordinating hardware setup and staff onboarding from the ground up</div>
+            <div class="outcome">Designed and facilitated 10+ evidence-based therapeutic group programs applying human-centered design principles</div>
+            <div class="outcome">Collaborated daily with clinicians to iterate on patient outcomes and refine the experience based on clinical feedback</div>
           </div>
           <div class="project-meta">
             <span class="meta-tag">HTC Vive</span>
@@ -759,7 +782,6 @@
             <img src="ps-lasvegas.jpeg" alt="Las Vegas Nevada" />
             <div class="ps-work-item-label">Typography & Photo</div>
           </div>
-          <!-- FIXED: was .jpeg, now .jpg to match actual filename -->
           <div class="ps-work-item">
             <img src="ps-yellowstone.jpg" alt="Yellowstone Trip" />
             <div class="ps-work-item-label">Photo Composite</div>
@@ -814,10 +836,13 @@
   <div class="section-inner">
     <div class="contact-inner">
       <p class="section-label reveal" style="justify-content:center;">Let's Work Together</p>
-      <h2 class="section-title reveal" style="text-align:center;">Ready when<br><em>you are.</em></h2>
+      <!-- FIX 4: Heading updated to active job search CTA -->
+      <h2 class="section-title reveal" style="text-align:center;">Actively seeking<br><em>my next role.</em></h2>
       <div class="contact-card reveal" style="transition-delay:0.15s;">
         <div class="contact-name">Jackson Pingel</div>
         <div class="contact-title">UX/UI · Product Design · Front-End</div>
+        <!-- FIX 4 continued: Availability blurb replaces passive "Ready when you are" energy -->
+        <p class="contact-availability">I'm currently open to <strong>full-time product design, UX, and creative technology roles</strong> — remote or hybrid in the Salt Lake City / Provo corridor. If you're building something worth using, I'd love to talk.</p>
         <div class="contact-links">
           <a href="mailto:pingeljackson@gmail.com" class="contact-link">
             <span class="contact-link-icon">✉</span>
