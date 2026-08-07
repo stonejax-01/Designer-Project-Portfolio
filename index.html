@@ -21,7 +21,7 @@
   --surface:#131c26;
   --text:#e9f1f7;
   --text-2:#93a6b5;
-  --text-3:#62717e;
+  --text-3:#737f8a;
   --cyan:#38bdf8;
   --cyan-hot:#7dd3fc;
   --rule:rgba(233,241,247,.14);
@@ -234,6 +234,16 @@ a{color:inherit}
 }
 .points li b{color:var(--text);font-weight:600}
 
+.reflect{
+  border-left:2px solid var(--cyan);
+  padding:.15rem 0 .15rem 1.15rem;margin-bottom:1.6rem;
+  font-size:.93rem;line-height:1.62;color:var(--text-2);
+}
+.reflect b{
+  display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
+  margin-bottom:.4rem;
+}
 .note{
   font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;
   color:var(--text-3);margin-bottom:1.5rem;
@@ -400,7 +410,7 @@ a.more-row:hover .more-name,a.more-row:hover .more-go{color:var(--cyan)}
 
     <div class="band-head rv">
       <p class="label">Selected work</p>
-      <h2 class="band-title">Two projects, in depth.</h2>
+      <h2 class="band-title">Three projects, in depth.</h2>
     </div>
 
     <!-- CASE — USU Dining -->
@@ -430,6 +440,10 @@ a.more-row:hover .more-name,a.more-row:hover .more-go{color:var(--cyan)}
 
         <p class="note">Course project &mdash; the prototype is a partial build and several flows were never finished.</p>
 
+        <p class="reflect">
+          <b>What I'd do differently</b>
+          Finish the prototype and run it with real users, iterating on their feedback rather than stopping at handoff. I'd also add back navigation &mdash; you can move forward through the app, but there's no way to return to the home screen.
+        </p>
         <p class="note">Coursework prototype &mdash; unfinished, and missing core features. Linked as-is.</p>
         <a href="https://www.figma.com/proto/0ygM6xTjpvyKSIxfpgXFpZ/Wireframes?node-id=0-1&amp;t=7MopSdxho1LRbKxF-1" target="_blank" rel="noopener" class="link">Open the Figma prototype &#8599;</a>
       </div>
@@ -467,6 +481,38 @@ a.more-row:hover .more-name,a.more-row:hover .more-go{color:var(--cyan)}
       </div>
     </article>
 
+    <!-- CASE — Therapeutic VR -->
+    <article class="case rv">
+      <div class="case-art">
+        <div class="frame">
+          <img src="Generic_VR.jpg" alt="Illustrative image of a virtual reality headset" loading="lazy" />
+        </div>
+        <div class="dim">
+          <span class="dim-rule"></span>
+          <span class="dim-text">Needed me &rarr; ran without me</span>
+          <span class="dim-rule"></span>
+        </div>
+        <p class="art-caption">Illustrative image. Utah State Hospital's privacy policy means no photographs of the program, its space, or its participants exist or could be shared.</p>
+      </div>
+
+      <div class="case-body">
+        <p class="case-meta">Therapeutic Recreation Technician &middot; Utah State Hospital &middot; HTC Vive</p>
+        <h3 class="case-title">Therapeutic VR Program</h3>
+        <p class="case-lead">Psychiatric inpatients needed treatment-mall hours. VR became a way to deliver them &mdash; so I took a program a previous undergrad had started and built it into something that <b>ran without me in the room</b>.</p>
+
+        <ul class="points">
+          <li>Turned an inherited, ad-hoc setup into a repeatable session: a patient walks in, picks a game, and starts.</li>
+          <li>Wrote a short in-place explainer for the headset so patients could begin on their own, with hands-on help available for anyone who struggled.</li>
+          <li><b>The outcome:</b> patients got into sessions without much explanation, and my supervisor ran the program independently on days I wasn't there.</li>
+        </ul>
+
+        <p class="reflect">
+          <b>What I'd do differently</b>
+          Design the physical space around it. The HTC Vive's sensors had to be set up and torn down for every session. With a dedicated room, the whole thing collapses to: turn on the laptop, put on the headset.
+        </p>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -491,12 +537,6 @@ a.more-row:hover .more-name,a.more-row:hover .more-go{color:var(--cyan)}
         <span class="more-name">3D printing</span>
         <span class="more-desc">330+ hours of production printing; original models built in Blender. Storefront and quote calculator in development.</span>
         <span class="more-go">In progress</span>
-      </div>
-
-      <div class="more-row">
-        <span class="more-name">Therapeutic VR</span>
-        <span class="more-desc">Built and ran a VR therapy program for psychiatric inpatients at Utah State Hospital.</span>
-        <span class="more-go">2023&ndash;24</span>
       </div>
 
     </div>
@@ -542,7 +582,7 @@ a.more-row:hover .more-name,a.more-row:hover .more-go{color:var(--cyan)}
 </main>
 
 <footer class="wrap foot">
-  <span>&copy; 2026 Jackson Pingel &mdash; hand-coded, no framework</span>
+  <span>&copy; 2026 Jackson Pingel &mdash; hand-coded, no framework. AI-assisted, human-decided.</span>
   <span>Salem, UT</span>
 </footer>
 
